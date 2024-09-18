@@ -1,0 +1,346 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>前端修行之路 - 前端进阶冷静前行</title><meta name="keywords" content="前端 JavaScript React webpack"><meta name="author" content="Thanks Glory"><meta name="copyright" content="Thanks Glory"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="天行健，君子以自强不息。 地势坤，君子以厚德载物。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="前端修行之路">
+<meta property="og:url" content="https://zhangqiu.zeabur.app/index.html">
+<meta property="og:site_name" content="前端修行之路">
+<meta property="og:description" content="天行健，君子以自强不息。 地势坤，君子以厚德载物。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhangqiu.zeabur.app/img/avatar.jpg">
+<meta property="article:author" content="Thanks Glory">
+<meta property="article:tag" content="前端 JavaScript React webpack">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhangqiu.zeabur.app/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhangqiu.zeabur.app/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '前端修行之路',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-09-18 15:08:29'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link defer rel="stylesheet" href="/css/customm.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">29</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/images/bg/index_img.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">前端修行之路</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">前端修行之路</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2024/09/18/WeChat/WindowInfo/" title="WindowInfo"><img class="post_bg" src="/images/cover/wechat.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WindowInfo"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/09/18/WeChat/WindowInfo/" title="WindowInfo">WindowInfo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-18T05:39:00.000Z" title="发表于 2024-09-18 13:39:00">2024-09-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/WeChat/">WeChat</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2024/09/18/WeChat/WindowInfo/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2024/09/18/WeChat/WindowInfo/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">有时候在开发小程序的时候会获取设备窗口信息，但是有些时候我们获取到的statusBarHeight为零，不知道是微信官方的BUG还是手机原因。出于该原因我们还是需要兼容一下写法：
+wx.getWindowInfo
+
+
+属性
+类型
+说明
+
+
+
+pixelRatio
+number
+设备像素比
+
+
+screenWidth
+number
+屏幕宽度，单位px
+
+
+screenHeight
+number
+屏幕高度，单位px
+
+
+windowWidth
+number
+可使用窗口宽度，单位px
+
+
+windowHeight
+number
+可使用窗口高度，单位px
+
+
+statusBarHeight
+number
+状态栏的高度，单位px
+
+
+safeArea
+SafeArea
+在竖屏正方向下的安全区域。部分机型没有安全区域概念，也不会返回 safeArea 字段，开发者需自行兼容。
+
+
+screenTop
+number
+窗口上边缘的y值
+
+
+safeArea
+
+
+结构属性
+说明
+说明
+
+
+
+left
+number
+安全区域左上角横坐标，单位px
+
+
+right
+number
+安全区域右下角横坐标，单位p ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/09/14/Vue/vue-inspector/" title="vite-plugin-vue-inspector"><img class="post_bg" src="/images/cover/vue.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vite-plugin-vue-inspector"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/09/14/Vue/vue-inspector/" title="vite-plugin-vue-inspector">vite-plugin-vue-inspector</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-14T06:56:05.000Z" title="发表于 2024-09-14 14:56:05">2024-09-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Vue/">Vue</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Vue/Vite/">Vite</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2024/09/14/Vue/vue-inspector/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2024/09/14/Vue/vue-inspector/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">现在很多web项目都是基于前后端分离的，绝大多数都是基于Vue，React等框架进行开发的。现在的web项目较以前也日益复杂，每一个前端工程都有很多组件但是我们在进行开发的时候总是在IDE和页面来回切换，在页面上也不好定位自己需要改哪一个组件，基于此推荐一个vue的vite插件能很好的解决从页面上定位组件行数的问题。
+vite-plugin-vue-inspector一个vite插件，提供点击浏览器元素自动跳转到本地IDE的功能。它支持 Vue2 &amp; 3 &amp; SSR。
+
+Configuration Vite 配置Vite1234567891011121314// for Vue2// vite.config.tsimport &#123; defineConfig, &#125; from &#x27;vite&#x27;import &#123; createVuePlugin, &#125; from &#x27;vite-plugin-vue2&#x27;import Inspector from &#x27;vite-plugin-vue-inspector&# ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/09/12/Css/margin-trim/" title="margin trim"><img class="post_bg" src="/images/cover/css.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="margin trim"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/09/12/Css/margin-trim/" title="margin trim">margin trim</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-12T09:03:44.000Z" title="发表于 2024-09-12 17:03:44">2024-09-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Css/">Css</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Css/Margin/">Margin</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2024/09/12/Css/margin-trim/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2024/09/12/Css/margin-trim/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">在项目中布局平常都会遇到一些排版上的问题,，比如垂直排列的元素之间增加下外边距：
+
+我们需要li之间出现margin，而不是1，2，3都有margin，通常做法是nth-last-child去掉最后一个元素的margin-bottom，但是有点麻烦，下面介绍一种方式只需一行css即可解决上面的问题，代码如下所示：
+123456789101112131415161718192021222324252627&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;title&gt;Document&lt;/title&gt;  &lt;style&gt;    ul &#123;      border: 1px solid #000; ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/08/01/JavaScript/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="隐式类型转换规则"><img class="post_bg" src="/images/cover/scope.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="隐式类型转换规则"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/01/JavaScript/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="隐式类型转换规则">隐式类型转换规则</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-01T05:55:32.000Z" title="发表于 2023-08-01 13:55:32">2023-08-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/JavaScript/js%E5%9F%BA%E7%A1%80/">js基础</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/08/01/JavaScript/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2023/08/01/JavaScript/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">JavaScript类型js数据类型：null，undefined，String，Number，Boolean，Symbol，Object，其中
+原始类型：Number、String、Null、Undefined、Boolean
+引用类型：Object,包含Array
+JavaScript 是一种弱类型或者说动态语言。这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。这也意味着你可以使用同一个变量保存不同类型的数据。
+JavaScript隐式类型转换以及规则隐式类型转换(ToPrimitive)​    将引用类型转换为原始类型,在拆箱过程中会遵循ECMAScript规定的toPrimitive原则,对引用类型进行转换
+什么是ToPrimitive函数​    ToPrimitive方法是在引用类型转换为原始类型的过程中js自动帮我们调用的方法     ToPrimitive方法中会按条件调用[Symbol.toPrimitive]；valueOf()；toString()中的一种或多种方法帮助我们将引用类型转换为原始类型
+ToPrimitive函数执行的一般顺序
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/01/JavaScript/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/" title="Event Queue (事件队列)"><img class="post_bg" src="/images/cover/event_queue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Event Queue (事件队列)"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/01/JavaScript/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/" title="Event Queue (事件队列)">Event Queue (事件队列)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-01T02:40:06.000Z" title="发表于 2023-08-01 10:40:06">2023-08-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/JavaScript/Event-Queue/">Event Queue</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/08/01/JavaScript/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2023/08/01/JavaScript/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">宏任务
+&lt;script&gt;标签中的运行代码
+事件触发的回调函数，例如DOM Events、I/O、requestAnimationFrame、Ajax、DOM
+setTimeout、setInterval、setImmediate(Nodejs)的回调函数
+
+微任务
+promises：Promise.then、Promise.catch、Promise.finally
+MutationObserver：使用方式
+queueMicrotask：使用方式
+process.nextTick：Node独有
+
+123456789101112131415console.log(&#x27;script start&#x27;);setTimeout(function() &#123;  console.log(&#x27;timeout1&#x27;);&#125;, 10);new Promise(resolve =&gt; &#123;    console.log(&#x27;promise1&#x27;);    resolve();    setTimeout(() =&gt; ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/07/30/JavaScript/%E6%89%8B%E5%86%99Promise/" title="Promise (实现原理)"><img class="post_bg" src="/images/cover/promise.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Promise (实现原理)"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/30/JavaScript/%E6%89%8B%E5%86%99Promise/" title="Promise (实现原理)">Promise (实现原理)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-30T03:31:41.000Z" title="发表于 2023-07-30 11:31:41">2023-07-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/JavaScript/Promise/">Promise</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/07/30/JavaScript/%E6%89%8B%E5%86%99Promise/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2023/07/30/JavaScript/%E6%89%8B%E5%86%99Promise/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Promise 是一个代理，它代表一个在创建 promise 时不一定已知的值。它允许你将处理程序与异步操作的最终成功值或失败原因关联起来。这使得异步方法可以像同步方法一样返回值：异步方法不会立即返回最终值，而是返回一个 promise，以便在将来的某个时间点提供该值，下面将用手写代码的方式体现Promise的原理：
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798991001011021031041051061071081091101111121131141151161171181191201211221231241251261271281291301311321331341351361371381391401411421431441451461471481491 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/07/30/TypeScript/%E6%B3%9B%E5%9E%8B%E5%B7%A5%E5%85%B7/" title="TypeScript 泛型工具"><img class="post_bg" src="/images/cover/typescript_generics.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TypeScript 泛型工具"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/30/TypeScript/%E6%B3%9B%E5%9E%8B%E5%B7%A5%E5%85%B7/" title="TypeScript 泛型工具">TypeScript 泛型工具</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-30T00:38:25.000Z" title="发表于 2023-07-30 08:38:25">2023-07-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/TypeScript/">TypeScript</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/TypeScript/%E6%B3%9B%E5%9E%8B-Generics/">泛型(Generics)</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/07/30/TypeScript/%E6%B3%9B%E5%9E%8B%E5%B7%A5%E5%85%B7/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2023/07/30/TypeScript/%E6%B3%9B%E5%9E%8B%E5%B7%A5%E5%85%B7/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">TS的常用泛型工具的实现和使用1、获取实际值的类型使用typeof关键词可以将js中的实际值转换成TS的类型 并通过[type]的方式获取
+12345678910111213let a = &#123;  a: 1,  b: &#x27;qqq&#x27;,  c: true,  hoby: [&#x27;java&#x27;, &#x27;python&#x27;],  type: [&#x27;1&#x27;, 1, true]&#125;;type Atype = typeof a;type A = typeof a[&#x27;a&#x27;]; // type A = numbertype B = typeof a[&#x27;b&#x27;]; // type B = stringtype C = typeof a[&#x27;c&#x27;]; // type C = booleantype Hoby = typeof a[&#x27;hoby&#x27;]; // type Hoby = string[]type Type = typeof a[&quot;type&q ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/09/11/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-%E5%B5%8C%E5%A5%97%E5%AF%BC%E8%88%AA%E3%80%81%E5%A4%9A%E8%AF%AD%E8%A8%80%E3%80%81%E4%B8%BB%E9%A2%98%E3%80%81Snackbar%E3%80%81Dialog%E3%80%81BottomSheet/" title="Flutter-Getx-嵌套导航、多语言、主题、Snackbar、Dialog、BottomSheet"><img class="post_bg" src="/images/cover/getx_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter-Getx-嵌套导航、多语言、主题、Snackbar、Dialog、BottomSheet"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/11/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-%E5%B5%8C%E5%A5%97%E5%AF%BC%E8%88%AA%E3%80%81%E5%A4%9A%E8%AF%AD%E8%A8%80%E3%80%81%E4%B8%BB%E9%A2%98%E3%80%81Snackbar%E3%80%81Dialog%E3%80%81BottomSheet/" title="Flutter-Getx-嵌套导航、多语言、主题、Snackbar、Dialog、BottomSheet">Flutter-Getx-嵌套导航、多语言、主题、Snackbar、Dialog、BottomSheet</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-10T16:01:11.000Z" title="发表于 2022-09-11 00:01:11">2022-09-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Flutter/">Flutter</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Flutter/Getx/">Getx</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2022/09/11/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-%E5%B5%8C%E5%A5%97%E5%AF%BC%E8%88%AA%E3%80%81%E5%A4%9A%E8%AF%AD%E8%A8%80%E3%80%81%E4%B8%BB%E9%A2%98%E3%80%81Snackbar%E3%80%81Dialog%E3%80%81BottomSheet/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2022/09/11/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-%E5%B5%8C%E5%A5%97%E5%AF%BC%E8%88%AA%E3%80%81%E5%A4%9A%E8%AF%AD%E8%A8%80%E3%80%81%E4%B8%BB%E9%A2%98%E3%80%81Snackbar%E3%80%81Dialog%E3%80%81BottomSheet/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+嵌套导航
+多语言
+主题
+3 UI 组件
+Snackbar
+Dialog
+BottomSheet
+
+
+
+正文嵌套导航
+几个 Navigator widget ，并排或者嵌套，他们是通过属性 key 来区分的，具体去哪里是通过 onGenerateRoute 实现的，在 getx 中 我们要把业务写到 controller中，状态切换用 Obx 控制 BottomNavigationBar，代码如下。
+
+lib/pages/nested_navigation/controller.dart
+
+1234567891011121314151617181920212223242526272829303132333435class NestedController extends GetxController &#123;  static NestedController get to =&gt; Get.find();  var currentIndex = 0.obs;  final pages = &lt;String&gt;[&#x27;/list&#x27;, &#x27;/detai ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/09/10/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-GetConnect%E3%80%81StateMixin%E3%80%81SuperController%E3%80%81GetController-Dio/" title="Flutter-Getx-GetConnect、StateMixin、SuperController、GetController+Dio"><img class="post_bg" src="/images/cover/getx_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter-Getx-GetConnect、StateMixin、SuperController、GetController+Dio"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/10/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-GetConnect%E3%80%81StateMixin%E3%80%81SuperController%E3%80%81GetController-Dio/" title="Flutter-Getx-GetConnect、StateMixin、SuperController、GetController+Dio">Flutter-Getx-GetConnect、StateMixin、SuperController、GetController+Dio</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-10T14:01:46.000Z" title="发表于 2022-09-10 22:01:46">2022-09-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Flutter/">Flutter</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Flutter/Getx/">Getx</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2022/09/10/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-GetConnect%E3%80%81StateMixin%E3%80%81SuperController%E3%80%81GetController-Dio/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2022/09/10/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-GetConnect%E3%80%81StateMixin%E3%80%81SuperController%E3%80%81GetController-Dio/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">正文GetConnect
+
+瞎聊设计模式
+
+Provider 提供者模式 位于高层 由他来决定从哪里、提供什么
+相对应的有 Consumer 消费者模式
+Repository 模式，这层有 OO 面向对象的意思，用来处理拉取数据细节，这样到 Controller 控制器 这一层只要处理业务就行，可方便测试
+DAO 就是纯粹的数据访问层，没有 00 的概念
+Service Model Entity …
+前端其实对数据加工、面向服务、领域模型偏弱，更多的是组件拆分、样式、布局，这才是要关系的，就算是测试也是 E2E 侧重不同。
+E2E（End To End）即端对端测试，属于黑盒测试，通过编写测试用例，自动化模拟用户操作，确保组件间通信正常，程序流数据传递如预期。
+
+封装 GetConnect
+
+lib/common/utils/base_provider.dart
+1234567891011121314151617class BaseProvider extends GetConnect &#123;  @override  void onInit() &#123;    httpCli ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/09/10/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E3%80%81%E4%BE%9D%E8%B5%96%E5%8A%A0%E8%BD%BD/" title="Flutter-Getx-状态管理、依赖加载"><img class="post_bg" src="/images/cover/getx_cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter-Getx-状态管理、依赖加载"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/10/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E3%80%81%E4%BE%9D%E8%B5%96%E5%8A%A0%E8%BD%BD/" title="Flutter-Getx-状态管理、依赖加载">Flutter-Getx-状态管理、依赖加载</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-10T12:01:04.000Z" title="发表于 2022-09-10 20:01:04">2022-09-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Flutter/">Flutter</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Flutter/Getx/">Getx</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2022/09/10/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E3%80%81%E4%BE%9D%E8%B5%96%E5%8A%A0%E8%BD%BD/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2022/09/10/Flutter/Flutter-Getx%E5%9F%BA%E7%A1%80-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E3%80%81%E4%BE%9D%E8%B5%96%E5%8A%A0%E8%BD%BD/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+4 种状态管理
+Obx
+GetX
+GetBuilder
+ValueBuilder
+
+
+防抖、限流 函数
+ever
+once
+debounce
+interval
+
+
+依赖注入
+Get.put
+Get.lazyPut
+
+
+视图组件
+GetView
+
+
+
+正文状态管理Obx
+lib/pages/state_obx/index.dart
+
+12345678910111213141516171819202122232425262728293031class StateObxView extends StatelessWidget &#123;  StateObxView(&#123;Key? key&#125;) : super(key: key);  final count = 0.obs;  @override  Widget build(BuildContext context) &#123;    return Scaffold(      appBar: AppBar(        title: Text(&quot;Obx(...)&quot;),      ),      bo ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Thanks Glory</div><div class="author-info__description"><div> <p style="margin:0px;margin-top:8px;line-height:1.3;font-weight:bold;">天行健，君子以自强不息。</p> <p style="margin:0px;line-height:1.3;font-weight:bold;">地势坤，君子以厚德载物。</p> </div></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">29</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ThanksGlory/blog-web"><i></i><span>我的 GitHub</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎访问我的博客！请定期查看，以获取最新的文章和更新。感谢您的支持与关注！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/09/18/WeChat/WindowInfo/" title="WindowInfo"><img src="/images/cover/wechat.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WindowInfo"/></a><div class="content"><a class="title" href="/2024/09/18/WeChat/WindowInfo/" title="WindowInfo">WindowInfo</a><time datetime="2024-09-18T05:39:00.000Z" title="发表于 2024-09-18 13:39:00">2024-09-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/14/Vue/vue-inspector/" title="vite-plugin-vue-inspector"><img src="/images/cover/vue.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vite-plugin-vue-inspector"/></a><div class="content"><a class="title" href="/2024/09/14/Vue/vue-inspector/" title="vite-plugin-vue-inspector">vite-plugin-vue-inspector</a><time datetime="2024-09-14T06:56:05.000Z" title="发表于 2024-09-14 14:56:05">2024-09-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/12/Css/margin-trim/" title="margin trim"><img src="/images/cover/css.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="margin trim"/></a><div class="content"><a class="title" href="/2024/09/12/Css/margin-trim/" title="margin trim">margin trim</a><time datetime="2024-09-12T09:03:44.000Z" title="发表于 2024-09-12 17:03:44">2024-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/01/JavaScript/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="隐式类型转换规则"><img src="/images/cover/scope.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="隐式类型转换规则"/></a><div class="content"><a class="title" href="/2023/08/01/JavaScript/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="隐式类型转换规则">隐式类型转换规则</a><time datetime="2023-08-01T05:55:32.000Z" title="发表于 2023-08-01 13:55:32">2023-08-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/01/JavaScript/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/" title="Event Queue (事件队列)"><img src="/images/cover/event_queue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Event Queue (事件队列)"/></a><div class="content"><a class="title" href="/2023/08/01/JavaScript/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/" title="Event Queue (事件队列)">Event Queue (事件队列)</a><time datetime="2023-08-01T02:40:06.000Z" title="发表于 2023-08-01 10:40:06">2023-08-01</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Css/"><span class="card-category-list-name">Css</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Css/Margin/"><span class="card-category-list-name">Margin</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Css/flex/"><span class="card-category-list-name">flex</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Flutter/"><span class="card-category-list-name">Flutter</span><span class="card-category-list-count">53</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Flutter/Getx/"><span class="card-category-list-name">Getx</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Flutter/dart/"><span class="card-category-list-name">dart</span><span class="card-category-list-count">30</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Flutter/flutter%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">flutter基础</span><span class="card-category-list-count">12</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/JavaScript/"><span class="card-category-list-name">JavaScript</span><span class="card-category-list-count">6</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Css/" style="font-size: 1.1em; color: #999">Css</a> <a href="/tags/Flutter/" style="font-size: 1.5em; color: #99a9bf">Flutter</a> <a href="/tags/JavaScript/" style="font-size: 1.42em; color: #99a6b7">JavaScript</a> <a href="/tags/Map/" style="font-size: 1.26em; color: #999fa8">Map</a> <a href="/tags/React/" style="font-size: 1.34em; color: #99a3b0">React</a> <a href="/tags/Threejs/" style="font-size: 1.18em; color: #999ca1">Threejs</a> <a href="/tags/TypeScript/" style="font-size: 1.1em; color: #999">TypeScript</a> <a href="/tags/Visual-Studio-Code/" style="font-size: 1.1em; color: #999">Visual Studio Code</a> <a href="/tags/Vue/" style="font-size: 1.1em; color: #999">Vue</a> <a href="/tags/WeChat/" style="font-size: 1.1em; color: #999">WeChat</a> <a href="/tags/flex/" style="font-size: 1.1em; color: #999">flex</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.18em; color: #999ca1">前端</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">35</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><span class="card-archive-list-count">19</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">77</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-01-08T16:15:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">61.2k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-09-18T07:08:28.867Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2024 By Thanks Glory</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon entered loaded" src="/img/icp.png" data-lazy-src="/img/icp.png" data-ll-status="loaded"><span>备案号：蜀ICP备2021031668号-1</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">站内搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  function loadValine () {
+    function initValine () {
+      let initData = {
+        el: '#vcomment',
+        appId: 'XUmdx98tExB4ay8lhoEz8bWR-MdYXbMMI',
+        appKey: '1L2OVQdOyiolKtqVSqXhuRlD',
+      }
+      
+      const valine = new Valine(initData)
+    }
+
+    if (typeof Valine === 'function') initValine() 
+    else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+  }
+
+  window.pjax ? loadValine() : window.addEventListener('load', loadValine)
+})()</script><script>function subtitleType () {
+  if (true) { 
+    window.typed = new Typed("#subtitle", {
+      strings: ["生舞台的大幕随时都可能拉开","关键是你愿意表演，还是选择躲避。"],
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '生舞台的大幕随时都可能拉开'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="true" data-text="" data-fontsize="25px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>

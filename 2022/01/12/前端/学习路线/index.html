@@ -1,0 +1,636 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>前端学习路线图 | 前端修行之路</title><meta name="keywords" content="前端"><meta name="author" content="Thanks Glory"><meta name="copyright" content="Thanks Glory"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前端面试学习路线图文字版  JavaScript基础   执行上下文&#x2F;作用域链&#x2F;闭包   介绍一个JavaScript的执行上下文 介绍一下JavaScript的作用域链 介绍一下JavaScript的闭包是什么已经应用的场景   this&#x2F;call&#x2F;apply&#x2F;bind   介绍一下JavaScript里的this 如何改变this指向 call&#x2F;apply有什么区别？ 如何实现call和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端学习路线图">
+<meta property="og:url" content="https://zhangqiu.zeabur.app/2022/01/12/%E5%89%8D%E7%AB%AF/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/index.html">
+<meta property="og:site_name" content="前端修行之路">
+<meta property="og:description" content="前端面试学习路线图文字版  JavaScript基础   执行上下文&#x2F;作用域链&#x2F;闭包   介绍一个JavaScript的执行上下文 介绍一下JavaScript的作用域链 介绍一下JavaScript的闭包是什么已经应用的场景   this&#x2F;call&#x2F;apply&#x2F;bind   介绍一下JavaScript里的this 如何改变this指向 call&#x2F;apply有什么区别？ 如何实现call和">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhangqiu.zeabur.app/images/cover/%E5%89%8D%E7%AB%AF%E6%B1%87%E5%B0%81%E9%9D%A2.jpg">
+<meta property="article:published_time" content="2022-01-12T08:25:00.000Z">
+<meta property="article:modified_time" content="2023-07-31T01:32:55.553Z">
+<meta property="article:author" content="Thanks Glory">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhangqiu.zeabur.app/images/cover/%E5%89%8D%E7%AB%AF%E6%B1%87%E5%B0%81%E9%9D%A2.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhangqiu.zeabur.app/2022/01/12/%E5%89%8D%E7%AB%AF/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '前端学习路线图',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-07-31 09:32:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link defer rel="stylesheet" href="/css/customm.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">29</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">前端修行之路</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">前端学习路线图</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-12T08:25:00.000Z" title="发表于 2022-01-12 16:25:00">2022-01-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-31T01:32:55.553Z" title="更新于 2023-07-31 09:32:55">2023-07-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">学习路线</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="前端学习路线图"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2022/01/12/%E5%89%8D%E7%AB%AF/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2022/01/12/%E5%89%8D%E7%AB%AF/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" itemprop="commentCount"></span></a></span></div></div></div><article class="post-content" id="article-container"><p><img src="/assets/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%9B%BE.jpg" alt="前端框架图"></p>
+<p>  <strong><font size="5">前端面试学习路线图文字版</font></strong></p>
+<ul>
+<li><p>JavaScript基础</p>
+</li>
+<li><ul>
+<li><p>执行上下文/作用域链/闭包</p>
+</li>
+<li><ul>
+<li>介绍一个JavaScript的执行上下文</li>
+<li>介绍一下JavaScript的作用域链</li>
+<li>介绍一下JavaScript的闭包是什么已经应用的场景</li>
+</ul>
+</li>
+<li><p>this/call/apply/bind</p>
+</li>
+<li><ul>
+<li>介绍一下JavaScript里的this</li>
+<li>如何改变this指向</li>
+<li>call/apply有什么区别？</li>
+<li>如何实现call和apply函数？</li>
+<li>如何实现一个bind？</li>
+</ul>
+</li>
+<li><p>原型/继承</p>
+</li>
+<li><ul>
+<li>介绍一下JavaScript的原型？</li>
+<li>原型链是什么？</li>
+<li>如何利用原型实现继承？</li>
+</ul>
+</li>
+<li><p>Promise</p>
+</li>
+<li><ul>
+<li>promise是什么？</li>
+<li>如何实现一个Promise (Promise A+)</li>
+<li>async       await</li>
+</ul>
+</li>
+<li><p>深浅拷贝</p>
+</li>
+<li><ul>
+<li>介绍一下JavaScript的深浅拷贝？</li>
+<li>如何实现浅拷贝？</li>
+<li>如何实现深拷贝？</li>
+<li>实现深拷贝需要注意哪些问题？</li>
+<li>如何解决循环引用的问题？</li>
+</ul>
+</li>
+<li><p>事件机制/Event      Loop</p>
+</li>
+<li><ul>
+<li>如何实现一个事件的发布订阅？</li>
+<li>介绍一下事件循环？</li>
+<li>宏任务和微任务的区别？</li>
+</ul>
+</li>
+<li><p>service      worker</p>
+</li>
+<li><p>web      worker</p>
+</li>
+<li><p>函数式编程</p>
+</li>
+<li><p>常用方法</p>
+</li>
+<li><ul>
+<li>数组方法</li>
+<li>ES6       新增方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>css基础</p>
+</li>
+<li><ul>
+<li><p>position</p>
+</li>
+<li><ul>
+<li>fixed       固定定位</li>
+<li>absolute       绝对定位</li>
+<li>relative       相对定位</li>
+</ul>
+</li>
+<li><p>行内/块级元素</p>
+</li>
+<li><p>flex</p>
+</li>
+<li><ul>
+<li>介绍一下flex布局？</li>
+<li>如何使用flex实现九宫格布局？</li>
+<li>flex:1指的是什么？ flex属性默认值是什么？</li>
+<li>分别介绍一下flex-shrink flex-basis？</li>
+<li>grid布局</li>
+</ul>
+</li>
+<li><p>1px</p>
+</li>
+<li><ul>
+<li>移动端1px问题是怎么解决的？</li>
+<li>介绍一下rem方案和vw方案，分别有哪些优缺点？</li>
+<li>rem方案的font-size是挂在哪儿的？</li>
+<li>rem方案时移动端字体是怎么处理的？</li>
+</ul>
+</li>
+<li><p>重绘和回流</p>
+</li>
+<li><ul>
+<li>介绍一下重绘和回流？</li>
+<li>如何避免重绘和回流？</li>
+</ul>
+</li>
+<li><p>居中/常见布局</p>
+</li>
+<li><p>层叠上下文</p>
+</li>
+<li><p>Scss/Less</p>
+</li>
+</ul>
+</li>
+<li><p>框架(vue、react)</p>
+</li>
+<li><ul>
+<li><p>React</p>
+</li>
+<li><p>Vue</p>
+</li>
+<li><ul>
+<li><p>MVVM</p>
+</li>
+<li><ul>
+<li>介绍一下MVVM，和MVC有什么区别？</li>
+<li>ViewModel有什么好处？</li>
+</ul>
+</li>
+<li><p>生命周期</p>
+</li>
+<li><ul>
+<li>nextTick是如何实现的？</li>
+<li>父组件挂载时，生命周期的顺序是怎么样的？</li>
+</ul>
+</li>
+<li><p>数据绑定</p>
+</li>
+<li><ul>
+<li><p>Vue双向绑定是如何实现的？</p>
+</li>
+<li><ul>
+<li>数据劫持</li>
+<li>发布订阅</li>
+</ul>
+</li>
+<li><p>Vue2中关于数组和对象数据观察时有做什么特殊处理吗？</p>
+</li>
+<li><ul>
+<li>重写数组方法</li>
+</ul>
+</li>
+<li><p>defineProperty和proxy有什么区别？</p>
+</li>
+<li><p>vue中的数据为什么频繁变化但只更新一次？</p>
+</li>
+</ul>
+</li>
+<li><p>状态管理</p>
+</li>
+<li><ul>
+<li>什么是状态管理</li>
+<li>介绍一下Vuex和Redux</li>
+<li>Vuex和Redux有什么区别？</li>
+<li>让你实现一个状态管理，改如何实现？</li>
+</ul>
+</li>
+<li><p>组件通信</p>
+</li>
+<li><ul>
+<li>父子组件如何进行通信</li>
+<li>爷孙组件如何进行通信</li>
+<li>兄弟组件如何通信</li>
+</ul>
+</li>
+<li><p>Virtual       Dom</p>
+</li>
+<li><ul>
+<li>Virtual        Dom 是什么？</li>
+<li>为什么需要Virtual Dom</li>
+<li>vue中的Virtual        Dom 解决了什么问题？</li>
+</ul>
+</li>
+<li><p>diff</p>
+</li>
+<li><ul>
+<li>介绍一下vue的diff策略</li>
+<li>介绍一下react的diff策略</li>
+<li>ue的diff策略和react的diff策略有什么不同？</li>
+<li>key用什么作用？</li>
+</ul>
+</li>
+<li><p>vue       computed/watch原理</p>
+</li>
+<li><ul>
+<li>computed是如何实现的？</li>
+<li>watch是如何实现的？</li>
+<li>computed的时候可以引用其他的computed属性，是如何实现的？</li>
+</ul>
+</li>
+<li><p>react       hook 了解一下是什么？</p>
+</li>
+<li><p>react       hooks/vue mixin</p>
+</li>
+<li><ul>
+<li>React        Hoc是什么？</li>
+<li>vue        mixin是什么？</li>
+<li>Hoc和mixin有什么区别？</li>
+<li>为什么vue没高价组件？</li>
+</ul>
+</li>
+<li><p>React和Vue有什么不同？</p>
+</li>
+<li><ul>
+<li>现在有一个项目，你是如何考虑使用vue还是react</li>
+<li>从多角度说一下vue和react有什么区别？</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>工程化</p>
+</li>
+<li><ul>
+<li><p>webpack</p>
+</li>
+<li><ul>
+<li><p>介绍一下webpack的构建流程？</p>
+</li>
+<li><p>webpack和rollup有什么相同点和不同点？</p>
+</li>
+<li><p>介绍一下Loader</p>
+</li>
+<li><ul>
+<li>常见的Loader有哪些？有什么作用？</li>
+<li>介绍一两个Loader的思路？</li>
+</ul>
+</li>
+<li><p>介绍一下Plugin</p>
+</li>
+<li><ul>
+<li>常见的Plugin有哪些？</li>
+<li>介绍一两个Plugin的思路？</li>
+</ul>
+</li>
+<li><p>webpack热更新是如何实现的？</p>
+</li>
+<li><p>webpack层面如何做性能优化的？</p>
+</li>
+<li><p>介绍一下webpack的tree-shaking</p>
+</li>
+<li><p>介绍一下webpack的scope hosting</p>
+</li>
+</ul>
+</li>
+<li><p>babel</p>
+</li>
+<li><ul>
+<li>介绍一下babel的原理？</li>
+</ul>
+</li>
+<li><p>模板引擎</p>
+</li>
+<li><ul>
+<li>如何实现一个最简单的模板引擎？</li>
+</ul>
+</li>
+<li><p>前端发布</p>
+</li>
+<li><ul>
+<li>一个前端页面是如何发布到线上的？</li>
+<li>cdn</li>
+<li>增量发布</li>
+</ul>
+</li>
+<li><p>weex</p>
+</li>
+<li><ul>
+<li>介绍一下week的原理</li>
+<li>为什么week比H5快？</li>
+<li>week有什么缺点？</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>性能优化</p>
+</li>
+<li><ul>
+<li><p>打包优化</p>
+</li>
+<li><ul>
+<li><p>webpack</p>
+</li>
+<li><ul>
+<li>Loader</li>
+<li>dell</li>
+<li>happypack</li>
+<li>压缩代码</li>
+<li>tree        shaking</li>
+<li>scope        hosting</li>
+<li>code        spliting</li>
+</ul>
+</li>
+<li><p>图片base64，cdn</p>
+</li>
+</ul>
+</li>
+<li><p>网络优化</p>
+</li>
+<li><ul>
+<li>dns</li>
+<li>cdn</li>
+<li>缓存</li>
+<li>preload       prefetch/懒加载</li>
+<li>SSR</li>
+</ul>
+</li>
+<li><p>代码优化</p>
+</li>
+<li><ul>
+<li>loading/骨架屏</li>
+<li>web       worker</li>
+<li>虚拟列表</li>
+<li>懒加载</li>
+<li>dom/style       批量更新</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Typescript</p>
+</li>
+<li><ul>
+<li>介绍一下Typescript</li>
+<li>Typescript和JavaScript相比有什么优势？</li>
+<li>介绍一下泛型，一般会用到什么地方？</li>
+<li>介绍一下interface</li>
+<li>d.ts是什么？</li>
+<li>Typescript是如何编译的？</li>
+<li>namespace      / module</li>
+</ul>
+</li>
+<li><p>网络</p>
+</li>
+<li><ul>
+<li><p>HTTP</p>
+</li>
+<li><ul>
+<li>常见的状态码有哪些？</li>
+<li>304表示什么？和302有什么区别？</li>
+<li>介绍一下HTTP缓存策略</li>
+<li>Connection为keep-alive表示什么？</li>
+</ul>
+</li>
+<li><p>DNS</p>
+</li>
+<li><ul>
+<li>介绍一下DNS</li>
+</ul>
+</li>
+<li><p>TCP</p>
+</li>
+<li><ul>
+<li>3次握手</li>
+<li>4次挥手</li>
+</ul>
+</li>
+<li><p>HTTPS</p>
+</li>
+<li><ul>
+<li>介绍一下HTTPS的工作原理</li>
+<li>HTTPS和HTTP有什么区别？</li>
+</ul>
+</li>
+<li><p>CDN</p>
+</li>
+<li><ul>
+<li>介绍一下CDN是什么以及他的应用场景</li>
+<li>CDN的回源是什么</li>
+</ul>
+</li>
+<li><p>从输入URL到页面展示，发生了什么？      一个老套但是经典的问题</p>
+</li>
+</ul>
+</li>
+<li><p>设计模式</p>
+</li>
+<li><ul>
+<li>介绍一下了解的设计模式以及应用场景</li>
+<li>Vue/React中应用了什么设计模式</li>
+</ul>
+</li>
+<li><p>数据结构</p>
+</li>
+<li><ul>
+<li>介绍一下栈、队列、链表</li>
+<li>用JavaScript实现栈/队列/链表</li>
+<li>树</li>
+</ul>
+</li>
+<li><p>算法</p>
+</li>
+<li><ul>
+<li>各种常见的排序算法的思路和复杂度</li>
+<li>二叉树前序/中序/后序遍历</li>
+<li>深度优先/广度优先的思路和应用场景</li>
+<li>动态规划</li>
+<li>diff</li>
+</ul>
+</li>
+<li><p>网络安全</p>
+</li>
+<li><ul>
+<li>XSS</li>
+<li>CSRF</li>
+<li>HTTPS</li>
+<li>风控策略</li>
+<li>可信前端</li>
+<li>前端-服务端安全策略</li>
+</ul>
+</li>
+<li><p>Node</p>
+</li>
+<li><ul>
+<li>一篇文章构建你的 NodeJS 知识体系</li>
+<li>真-Node多线程</li>
+<li>浏览器与Node的事件循环(Event Loop)有何区别?</li>
+<li>聊聊      Node.js RPC</li>
+<li>Understanding      Streams in Node.js</li>
+<li>深入理解      Node.js 进程与线程</li>
+<li>如何通过饿了么 Node.js 面试</li>
+<li>字节跳动面试官：请你实现一个大文件上传和断点续传</li>
+</ul>
+</li>
+<li><p>业务/项目</p>
+</li>
+<li><ul>
+<li>思考题，自由发挥</li>
+</ul>
+</li>
+<li><p>其他</p>
+</li>
+<li><ul>
+<li>深入浅出浏览器渲染原理</li>
+<li>前端开发如何独立解决跨域问题</li>
+<li>探索      Serverless 中的前端开发模式</li>
+<li>「NGW」前端新技术赛场：Serverless SSR 技术内幕</li>
+<li>JavaScript与Unicode</li>
+<li>九种跨域方式实现原理（完整版）</li>
+<li>7分钟理解JS的节流、防抖及使用场景</li>
+<li>浏览器的工作原理：新式网络浏览器幕后揭秘</li>
+<li>Different      Types Of Observers Supported By Modern Browsers</li>
+<li>浏览器同源策略与ajax跨域方法汇总</li>
+</ul>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Thanks Glory</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zhangqiu.zeabur.app/2022/01/12/%E5%89%8D%E7%AB%AF/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">https://zhangqiu.zeabur.app/2022/01/12/%E5%89%8D%E7%AB%AF/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zhangqiu.zeabur.app" target="_blank">前端修行之路</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div><div class="post_share"><div class="social-share" data-image="/images/cover/%E5%89%8D%E7%AB%AF%E6%B1%87%E5%B0%81%E9%9D%A2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/01/14/JavaScript/JavaScript%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6/"><img class="prev-cover" src="/images/cover/javascript_context.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">JavaScript 执行机制</div></div></a></div><div class="next-post pull-right"><a href="/2022/01/11/Css/flex%E5%B8%83%E5%B1%80/"><img class="next-cover" src="/images/cover/flex.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Flex布局</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/01/25/%E5%89%8D%E7%AB%AF/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/" title="28个辅助学习网站"><img class="cover" src="/images/cover/website_cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-25</div><div class="title">28个辅助学习网站</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Thanks Glory</div><div class="author-info__description"><div> <p style="margin:0px;margin-top:8px;line-height:1.3;font-weight:bold;">天行健，君子以自强不息。</p> <p style="margin:0px;line-height:1.3;font-weight:bold;">地势坤，君子以厚德载物。</p> </div></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">29</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ThanksGlory/blog-web"><i></i><span>我的 GitHub</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎访问我的博客！请定期查看，以获取最新的文章和更新。感谢您的支持与关注！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/09/18/WeChat/WindowInfo/" title="WindowInfo"><img src="/images/cover/wechat.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WindowInfo"/></a><div class="content"><a class="title" href="/2024/09/18/WeChat/WindowInfo/" title="WindowInfo">WindowInfo</a><time datetime="2024-09-18T05:39:00.000Z" title="发表于 2024-09-18 13:39:00">2024-09-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/14/Vue/vue-inspector/" title="vite-plugin-vue-inspector"><img src="/images/cover/vue.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vite-plugin-vue-inspector"/></a><div class="content"><a class="title" href="/2024/09/14/Vue/vue-inspector/" title="vite-plugin-vue-inspector">vite-plugin-vue-inspector</a><time datetime="2024-09-14T06:56:05.000Z" title="发表于 2024-09-14 14:56:05">2024-09-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/12/Css/margin-trim/" title="margin trim"><img src="/images/cover/css.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="margin trim"/></a><div class="content"><a class="title" href="/2024/09/12/Css/margin-trim/" title="margin trim">margin trim</a><time datetime="2024-09-12T09:03:44.000Z" title="发表于 2024-09-12 17:03:44">2024-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/01/JavaScript/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="隐式类型转换规则"><img src="/images/cover/scope.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="隐式类型转换规则"/></a><div class="content"><a class="title" href="/2023/08/01/JavaScript/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="隐式类型转换规则">隐式类型转换规则</a><time datetime="2023-08-01T05:55:32.000Z" title="发表于 2023-08-01 13:55:32">2023-08-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/01/JavaScript/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/" title="Event Queue (事件队列)"><img src="/images/cover/event_queue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Event Queue (事件队列)"/></a><div class="content"><a class="title" href="/2023/08/01/JavaScript/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/" title="Event Queue (事件队列)">Event Queue (事件队列)</a><time datetime="2023-08-01T02:40:06.000Z" title="发表于 2023-08-01 10:40:06">2023-08-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2024 By Thanks Glory</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon entered loaded" src="/img/icp.png" data-lazy-src="/img/icp.png" data-ll-status="loaded"><span>备案号：蜀ICP备2021031668号-1</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">站内搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'XUmdx98tExB4ay8lhoEz8bWR-MdYXbMMI',
+      appKey: '1L2OVQdOyiolKtqVSqXhuRlD',
+      avatar: 'monsterid',
+      serverURLs: 'https://xumdx98t.api.lncldglobal.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, {"enableQQ":true,"placeholder":"记得留下你的暱称和邮箱....可以快速收到回復"}))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="true" data-text="" data-fontsize="25px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>
